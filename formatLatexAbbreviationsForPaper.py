@@ -13,10 +13,8 @@ except FileNotFoundError:
 
 lines.sort()
 
-f = open(FILE_NAME_WRITE_TO, "w+")
-for i in lines:
-	new_line = i.split(" ", 1)
-	line_to_be_written = f"{new_line[0]} & {new_line[1]} \\\\"
-	f.write(f"{line_to_be_written}\n")
-
-f.close()
+with open(FILE_NAME_WRITE_TO, "w+") as f:
+	for i in lines:
+		new_line = i.split(" ", 1)
+		line_to_be_written = f"{new_line[0]} & {new_line[1]} \\\\"
+		f.write(f"{line_to_be_written}\n")
