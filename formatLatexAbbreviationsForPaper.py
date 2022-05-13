@@ -13,8 +13,17 @@ except FileNotFoundError:
 
 lines.sort()
 
+lines_set = set(lines)
+if len(lines) == len(lines_set):
+	print('No duplicates!')
+else:
+	print('Duplicates!')
+	for index in range(len(lines) - 1):
+		if lines[index] == lines[index + 1]:
+			print(lines[index])
+
 with open(FILE_NAME_WRITE_TO, "w+") as f:
-	for i in lines:
+	for i in lines_set:
 		new_line = i.split(" ", 1)
 		line_to_be_written = f"{new_line[0]} & {new_line[1]} \\\\"
 		f.write(f"{line_to_be_written}\n")
