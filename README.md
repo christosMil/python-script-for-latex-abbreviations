@@ -1,6 +1,6 @@
 # Python scripts for latex abbreviations
 
-## formatLatexAbbreviationsForPaper.py
+## paper_abbreviations_latex_formatter.py
 A Python script that takes as input a .txt file with abbreviations in the format {ABBR}{SPACE}{DESCRIPTION}{END_OF_LINE} and outputs a sorted .txt file that can be used for an abbreviations table in latex.
 
 ## acronyms.py
