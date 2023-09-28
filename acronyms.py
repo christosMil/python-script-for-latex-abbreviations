@@ -8,7 +8,7 @@ import sys
 
 # Set filenames.
 READ_FILE = 'abbreviations.txt'
-STORE_FILE = f"acronyms.tex"
+STORE_FILE = 'acronyms.tex'
 
 
 def read_abbreviations(filename):
@@ -45,7 +45,7 @@ def format_acronyms(abbreviations):
     Creates the string that contains all the acronyms formatted for the
     output file. Two reasons to do this:
     1. Write in one passage to the file, in the next block of commands.
-    2. Find the longest acronym label, to use it foralignment.
+    2. Find the longest acronym label, to use it for alignment.
     '''
     acronyms = ""
     max_acronym_label = ""
